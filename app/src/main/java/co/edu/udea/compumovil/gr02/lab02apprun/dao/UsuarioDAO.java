@@ -28,6 +28,20 @@ public class UsuarioDAO extends BDAppRunDAO {
 
     }
 
+    //@@@ TODO EL METODO
+    public Cursor getUsuario(String correo){
+
+        String[] columnas = new String[]{
+                DataBaseHelper.ID_USUARIO_COLUMNA,
+                DataBaseHelper.CORREO_USUARIO_COLUMNA,
+                DataBaseHelper.PASSWORD_USUARIO_COLUMNA
+        };
+
+        return getDb().query(DataBaseHelper.TABLA_USUARIO,columnas,
+                DataBaseHelper.CORREO_USUARIO_COLUMNA + "=?",
+                new String[]{correo},null,null,null);
+
+    }
 
     public int eliminarUsuario(Usuario usuario){
         String idUsuario= Integer.toString(usuario.getIdUsuario());

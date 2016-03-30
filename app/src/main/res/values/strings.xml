@@ -12,6 +12,7 @@
 
     <!-- Strings related to activity_login -->
     <string name="error_correo_invalido">Este correo es invalido</string>
+    <string name="error_correo_incorrecto">Este usuario no existe</string>
     <string name="error_contrasena_invalida">Esta contraseña es muy corta</string>
     <string name="error_contrasena_incorrecta">Contraseña incorrecta</string>
     <string name="error_campo_obligatorio">Este campo es obligatorio</string>

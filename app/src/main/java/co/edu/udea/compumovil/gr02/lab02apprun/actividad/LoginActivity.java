@@ -4,10 +4,10 @@ package co.edu.udea.compumovil.gr02.lab02apprun.actividad;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 
 import co.edu.udea.compumovil.gr02.lab02apprun.R;
+import co.edu.udea.compumovil.gr02.lab02apprun.dao.UsuarioDAO;
+import co.edu.udea.compumovil.gr02.lab02apprun.modelo.Usuario;
 
 
 /**
@@ -31,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText contraseñaView;
     private AutoCompleteTextView correoView;
     private SharedPreferences.Editor editor;
+    private UsuarioDAO manager;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,32 @@ public class LoginActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        manager = new UsuarioDAO(this);
+        UsuarioDAO usuarioDAO = new UsuarioDAO(this);
+/*
+        Usuario usuario = new Usuario();
+        usuario.setNombre("Pepe");
+        usuario.setApellido("Pepe");
+        usuario.setCorreo("pepe@gmail.com");
+        usuario.setPassword("pepe");
+        usuarioDAO.guardarUsuario(usuario);
+
+        Usuario usuario2 = new Usuario();
+        usuario2.setNombre("Pepe");
+        usuario2.setApellido("Pepe");
+        usuario2.setCorreo("pepe2@gmail.com");
+        usuario2.setPassword("pepe");
+        usuarioDAO.guardarUsuario(usuario2);
+
+        Usuario usuario2 = new Usuario();
+        usuario2.setNombre("Pepe");
+        usuario2.setApellido("Pepe");
+        usuario2.setCorreo("pepe3@gmail.com");
+        usuario2.setPassword("pepepe");
+        usuarioDAO.guardarUsuario(usuario2);*/
+
 
 
         //Verificar si existe una sesion previa
@@ -91,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
         View focusView = null;
 
         // Check valid password
-        if (TextUtils.isEmpty(password) && !esContrasenaValida(password)) {
+        if (TextUtils.isEmpty(password) || !esContrasenaValida(password)) {
             contraseñaView.setError(getString(R.string.error_contrasena_invalida));
             focusView = contraseñaView;
             cancel = true;
@@ -109,8 +139,38 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (!cancel) {
-            guardarSesion(email,password);
-            iniciarNavigationDrawer();
+
+            cursor = manager.getUsuario(email);
+
+            String correo = "";
+            String contrasena = "";
+            //Nos aseguramos de que existe al menos un registro
+            if (cursor.moveToFirst()) {
+                //Recorremos el cursor hasta que no haya más registros
+                do {
+                    correo = cursor.getString(1);
+                    contrasena = cursor.getString(2);
+                } while(cursor.moveToNext());
+
+                System.out.println(correo);
+                System.out.println(contrasena);
+
+                if(contrasena.equals(password)){
+                    guardarSesion(email,password);
+                    iniciarNavigationDrawer();
+                } else {
+                    contraseñaView.setError(getString(R.string.error_contrasena_incorrecta));
+                    focusView = contraseñaView;
+                    focusView.requestFocus();
+                }
+
+            } else {
+                correoView.setError(getString(R.string.error_correo_incorrecto));
+                focusView = correoView;
+                focusView.requestFocus();
+            }
+
+
         } else{
             focusView.requestFocus();
         }
