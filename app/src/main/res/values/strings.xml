@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lab02AppRun</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_opciones">Menu de opciones</string>
+    <string name="opcion_carrera">Carrera</string>
+    <string name="opcion_perfil">Perfil</string>
+    <string name="opcion_acerca">Acerca de</string>
+
+    <string name="cerrar_sesion">Cerrar sesion</string>
+
+    <string name="login_correo">Correo</string>
+    <string name="login_contraseña">Contraseña</string>
+    <string name="accion_ingresar">Ingresar</string>
+
+
+</resources>

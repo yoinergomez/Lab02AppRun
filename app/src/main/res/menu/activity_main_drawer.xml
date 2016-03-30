@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_opciones">
+        <menu>
+            <item
+                android:id="@+id/nav_carreras"
+                android:title="@string/opcion_carrera" />
+            <item
+                android:id="@+id/nav_perfil"
+                android:title="@string/opcion_perfil" />
+            <item
+                android:id="@+id/nav_acerca"
+                android:title="@string/opcion_acerca" />
+        </menu>
+    </item>
+
+</menu>
