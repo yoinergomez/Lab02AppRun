@@ -1,5 +1,8 @@
 package co.edu.udea.compumovil.gr02.lab02apprun.actividad;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -64,6 +67,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         return true;
     }
 
+    //@@@ TODO ESTE METODO
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -73,6 +77,16 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.cerrar_sesion) {
+            //Limpiando las preferencias compartidas
+            SharedPreferences sharedpreferences;
+            sharedpreferences = getSharedPreferences(LoginActivity.PREFERENCIA, Context.MODE_PRIVATE);
+            sharedpreferences.edit().clear().apply();
+
+            //Iniciando la actividad login
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            this.finish();
+
             return true;
         }
 

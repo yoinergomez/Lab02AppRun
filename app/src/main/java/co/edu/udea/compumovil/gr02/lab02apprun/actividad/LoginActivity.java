@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         //Obtengo preferencia compartida para almacenar la sesion
         sharedpreferences = getSharedPreferences(PREFERENCIA, Context.MODE_PRIVATE);
 
+
         //Obtengo componentes visuales
         correoView = (AutoCompleteTextView) findViewById(R.id.email);
         contraseñaView = (EditText) findViewById(R.id.password);
@@ -74,9 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         editor = sharedpreferences.edit();
         editor.putString("correo", correo);
         editor.putString("contrasena", contrasena);
-        if(editor.commit()){
-            Log.d("@@@", "Guardo sesion");
-        }
+        editor.commit();
     }
 
     private void validarLogin() {
