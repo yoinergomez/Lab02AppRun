@@ -54,6 +54,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //Verificar si existe una sesion previa
+        if(existeSesion()){
+            iniciarNavigationDrawer();
+        }
+
         Button mEmailSignInButton = (Button) findViewById(R.id.ingresar_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -111,13 +116,21 @@ public class LoginActivity extends AppCompatActivity {
 
         if (!cancel) {
             guardarSesion(email,password);
-            Intent intent = new Intent(this, NavigationDrawerActivity.class);
-            startActivity(intent);
-            this.finish();
+            iniciarNavigationDrawer();
         } else{
             focusView.requestFocus();
         }
 
+    }
+
+    public boolean existeSesion(){
+        return false;
+    }
+
+    public void iniciarNavigationDrawer(){
+        Intent intent = new Intent(this, NavigationDrawerActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 
     private boolean esCorreoValido(String email) {
