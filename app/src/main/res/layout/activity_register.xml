@@ -106,6 +106,18 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
+                android:id="@+id/insertar_button_registrar"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="agregarImagen"
+                android:layout_marginTop="16dp"
+                android:text="@string/accion_importar_imagen"
+                android:textStyle="bold" />
+
+
+
+            <Button
                 android:id="@+id/registrar_button_registrar"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"

@@ -21,6 +21,7 @@ public class UsuarioDAO extends BDAppRunDAO {
         values.put(DataBaseHelper.NOMBRE_USUARIO_COLUMNA,usuario.getNombre());
         values.put(DataBaseHelper.APELLIDO_USUARIO_COLUMNA,usuario.getApellido());
         values.put(DataBaseHelper.PASSWORD_USUARIO_COLUMNA,usuario.getPassword());
+        values.put(DataBaseHelper.IMAGEN_USUARIO_COLUMNA, usuario.getImagen());
         values.put(DataBaseHelper.CORREO_USUARIO_COLUMNA, usuario.getCorreo());
 
         return getDb().insert(DataBaseHelper.TABLA_USUARIO,null,values);

@@ -9,6 +9,7 @@ public class Usuario {
     private String apellido;
     private String password;
     private String correo;
+    private byte[] imagen;
 
 
     public Usuario(){
@@ -55,4 +56,11 @@ public class Usuario {
         this.correo = correo;
     }
 
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
+    }
 }

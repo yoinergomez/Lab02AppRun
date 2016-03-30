@@ -21,6 +21,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String APELLIDO_USUARIO_COLUMNA = "apellido";
     public static final String PASSWORD_USUARIO_COLUMNA = "password";
     public static final String CORREO_USUARIO_COLUMNA= "correo";
+    public static final String IMAGEN_USUARIO_COLUMNA= "imagen";
     //campos de la la tabla Carrera
     public static final String ID_CARRERA_COLUMNA = "_id";
     public static final String NOMBRE_CARRERA_COLUMNA = "nombre";
@@ -40,6 +41,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             + TABLA_USUARIO + "(" + ID_USUARIO_COLUMNA + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + NOMBRE_USUARIO_COLUMNA + " TEXT NOT NULL, " + APELLIDO_USUARIO_COLUMNA + " TEXT NOT NULL, "
             + PASSWORD_USUARIO_COLUMNA + " TEXT NOT NULL, "
+            + IMAGEN_USUARIO_COLUMNA + "BLOB,"
             + CORREO_USUARIO_COLUMNA + " TEXT NOT NULL );";
 
     public static final String CREAR_TABLA_CARRERA="CREATE TABLE "

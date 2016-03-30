@@ -11,12 +11,18 @@
     <string name="opcion_perfil">Perfil</string>
     <string name="opcion_acerca">Acerca de</string>
 
+    <!-- Strings dialog_importar_imagen -->
+    <string name="galeria">Galeria</string>
+    <string name="camara">Camara</string>
+    <string name="salir">Salir</string>
+
     <!-- Strings activity_login -->
     <string name="cerrar_sesion">Cerrar sesion</string>
     <string name="login_correo">Correo</string>
     <string name="login_contraseña">Contraseña</string>
     <string name="accion_ingresar">Ingresar</string>
     <string name="accion_registrar">Registrar</string>
+    <string name="accion_importar_imagen">Importar imagen</string>
 
     <!-- Strings activity_register -->
     <string name="register_nombre">Nombre</string>
