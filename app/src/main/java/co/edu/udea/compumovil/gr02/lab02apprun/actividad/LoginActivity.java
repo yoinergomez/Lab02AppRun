@@ -99,6 +99,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        Button registerButton = (Button) findViewById(R.id.registrar_button);
+        registerButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iniciarRegistro();
+            }
+        });
+
     }
 
     private void guardarSesion(String correo, String contrasena){
@@ -185,6 +193,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void iniciarNavigationDrawer(){
         Intent intent = new Intent(this, NavigationDrawerActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
+
+    public void iniciarRegistro(){
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
         this.finish();
     }
