@@ -3,9 +3,7 @@
     package="co.edu.udea.compumovil.gr02.lab02apprun">
 
     <!-- To auto-complete the email text field in the activity_login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"

@@ -192,12 +192,14 @@ public class RegisterActivity extends AppCompatActivity {
                 .setOnClickListener(new View.OnClickListener() {
                     @Override public void onClick(View v) {
                         abrirGaleria();
+                        dialog.dismiss();
                     }
                 });
         dialog.findViewById(R.id.btnTomarFoto)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override public void onClick(View v) {
                         abrirCamara();
+                        dialog.dismiss();
                     }
                 });
 
