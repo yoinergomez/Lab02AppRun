@@ -44,8 +44,17 @@ public class CarreraDAO extends BDAppRunDAO{
 
     public Cursor getTodasLasCarreras() {
         String[] columnas = new String[]{DataBaseHelper.ID_CARRERA_COLUMNA,DataBaseHelper.NOMBRE_CARRERA_COLUMNA ,
-                DataBaseHelper.LUGAR_CARRERA_COLUMNA };
+                DataBaseHelper.LUGAR_CARRERA_COLUMNA,DataBaseHelper.DESCRIPCION_CARRERA_COLUMNA };
         return getDb().query(DataBaseHelper.TABLA_CARRERA, columnas, null, null, null, null, null);
 
+    }
+
+    public int getIdUltimoRegistro(){
+        Cursor c=getTodasLasCarreras();
+        if(c.moveToLast()){
+            return c.getInt(0);
+        }else{
+            return 0;
+        }
     }
 }

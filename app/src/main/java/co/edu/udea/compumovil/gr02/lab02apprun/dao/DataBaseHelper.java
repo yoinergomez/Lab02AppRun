@@ -41,7 +41,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             + TABLA_USUARIO + "(" + ID_USUARIO_COLUMNA + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + NOMBRE_USUARIO_COLUMNA + " TEXT NOT NULL, " + APELLIDO_USUARIO_COLUMNA + " TEXT NOT NULL, "
             + PASSWORD_USUARIO_COLUMNA + " TEXT NOT NULL, "
-            + IMAGEN_USUARIO_COLUMNA + "BLOB,"
+            + IMAGEN_USUARIO_COLUMNA + " BLOB, "
             + CORREO_USUARIO_COLUMNA + " TEXT NOT NULL );";
 
     public static final String CREAR_TABLA_CARRERA="CREATE TABLE "

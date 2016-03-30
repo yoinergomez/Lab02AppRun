@@ -35,7 +35,11 @@ public class UsuarioDAO extends BDAppRunDAO {
         String[] columnas = new String[]{
                 DataBaseHelper.ID_USUARIO_COLUMNA,
                 DataBaseHelper.CORREO_USUARIO_COLUMNA,
-                DataBaseHelper.PASSWORD_USUARIO_COLUMNA
+                DataBaseHelper.PASSWORD_USUARIO_COLUMNA,
+                DataBaseHelper.NOMBRE_USUARIO_COLUMNA,
+                DataBaseHelper.APELLIDO_USUARIO_COLUMNA,
+                DataBaseHelper.IMAGEN_USUARIO_COLUMNA,
+
         };
 
         return getDb().query(DataBaseHelper.TABLA_USUARIO,columnas,

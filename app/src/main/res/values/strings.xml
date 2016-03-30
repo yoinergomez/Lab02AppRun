@@ -41,4 +41,17 @@
     <string name="error_contrasena_incorrecta">Contraseña incorrecta</string>
     <string name="error_campo_obligatorio">Este campo es obligatorio</string>
 
+    <!-- Strings relacionados al fragment crear carrera-->
+    <string name="edit_nombre">Nombre de la carrera</string>
+    <string name="edit_descripcion">Descripcion</string>
+    <string name="edit_distancia">Distancia</string>
+    <string name="edit_fecha">Fecha</string>
+    <string name="edit_lugar">Lugar</string>
+    <string name="txtView_fecha">Seleccione la fecha</string>
+    <string name="edit_correoContacto">Correo del contacto</string>
+    <string name="edit_telefonoContacto">Telefono del contacto</string>
+    <string name="btn_crearCarrera">Crear carrera</string>
+
+    <string name="texto_contacto">Hello blank fragment lista carrera</string>
+
 </resources>
