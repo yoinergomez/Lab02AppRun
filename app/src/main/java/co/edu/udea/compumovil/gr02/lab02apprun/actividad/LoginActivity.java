@@ -200,7 +200,7 @@ public class LoginActivity extends AppCompatActivity {
     public void iniciarRegistro(){
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
-        this.finish();
+        //this.finish();
     }
 
     private boolean esCorreoValido(String email) {

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Lab02AppRun</string>
     <string name="autenticacion">Autenticación</string>
+    <string name="registrar">Registrar</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -10,17 +11,26 @@
     <string name="opcion_perfil">Perfil</string>
     <string name="opcion_acerca">Acerca de</string>
 
-    <!-- Strings related to activity_login -->
-    <string name="error_correo_invalido">Este correo es invalido</string>
-    <string name="error_correo_incorrecto">Este usuario no existe</string>
-    <string name="error_contrasena_invalida">Esta contraseña es muy corta</string>
-    <string name="error_contrasena_incorrecta">Contraseña incorrecta</string>
-    <string name="error_campo_obligatorio">Este campo es obligatorio</string>
+    <!-- Strings activity_login -->
     <string name="cerrar_sesion">Cerrar sesion</string>
     <string name="login_correo">Correo</string>
     <string name="login_contraseña">Contraseña</string>
     <string name="accion_ingresar">Ingresar</string>
     <string name="accion_registrar">Registrar</string>
 
+    <!-- Strings activity_register -->
+    <string name="register_nombre">Nombre</string>
+    <string name="register_apellido">Apellido</string>
+    <string name="register_correo">Correo</string>
+    <string name="register_contrasena">Contraseña</string>
+    <string name="register_repita_contrasena">Repita contraseña</string>
+    <string name="accion_cancelar">Cancelar</string>
+
+    <!-- Strings errores -->
+    <string name="error_correo_invalido">Este correo es invalido</string>
+    <string name="error_correo_incorrecto">Este usuario no existe</string>
+    <string name="error_contrasena_invalida">Esta contraseña es muy corta</string>
+    <string name="error_contrasena_incorrecta">Contraseña incorrecta</string>
+    <string name="error_campo_obligatorio">Este campo es obligatorio</string>
 
 </resources>
