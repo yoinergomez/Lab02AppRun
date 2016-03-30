@@ -8,7 +8,7 @@
 
     <string name="menu_opciones">Menu de opciones</string>
     <string name="opcion_carrera">Carrera</string>
-    <string name="opcion_perfil">Perfil</string>
+    <string name="opcion_perfil">Perfil de usuario</string>
     <string name="opcion_acerca">Acerca de</string>
 
     <!-- Strings dialog_importar_imagen -->
@@ -42,16 +42,35 @@
     <string name="error_campo_obligatorio">Este campo es obligatorio</string>
 
     <!-- Strings relacionados al fragment crear carrera-->
-    <string name="edit_nombre">Nombre de la carrera</string>
-    <string name="edit_descripcion">Descripcion</string>
-    <string name="edit_distancia">Distancia</string>
-    <string name="edit_fecha">Fecha</string>
-    <string name="edit_lugar">Lugar</string>
+    <string name="edit_nombre">Nombre de la carrera: </string>
+    <string name="edit_descripcion">Descripcion: </string>
+    <string name="edit_distancia">Distancia: </string>
+    <string name="edit_fecha">Fecha: </string>
+    <string name="edit_lugar">Lugar: </string>
     <string name="txtView_fecha">Seleccione la fecha</string>
     <string name="edit_correoContacto">Correo del contacto</string>
     <string name="edit_telefonoContacto">Telefono del contacto</string>
     <string name="btn_crearCarrera">Crear carrera</string>
 
     <string name="texto_contacto">Hello blank fragment lista carrera</string>
+
+
+
+    <!-- Strings perfil_fragment -->
+    <string name="nombre_perfil">Nombre: </string>
+    <string name="apellido_perfil">Apellido: </string>
+    <string name="correo_perfil">Correo: </string>
+
+
+    <!-- String acerca fragment -->
+    <string name="integrantes_acerca">Integrantes</string>
+    <string name="jhonatan">Jhonatan Alexander Orozco Blandon</string>
+    <string name="yoiner">Yoiner Esteban Gomez Ayala</string>
+    <string name="curso">Computacion movil</string>
+    <string name="laboratorio">Laboratorio 2</string>
+    <string name="profesor_valor">Sebastian Guzman</string>
+    <string name="profesor">Profesor</string>
+    <string name="año">2016</string>
+
 
 </resources>
