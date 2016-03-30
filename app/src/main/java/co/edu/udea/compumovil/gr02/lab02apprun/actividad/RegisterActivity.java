@@ -158,7 +158,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return true;
 
             } else {
-                correoView.setError(getString(R.string.error_correo_incorrecto));
+                correoView.setError(getString(R.string.error_correo_duplicado));
                 focusView = correoView;
                 focusView.requestFocus();
             }
