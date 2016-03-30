@@ -1,7 +1,9 @@
 package co.edu.udea.compumovil.gr02.lab02apprun.actividad;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -23,14 +25,21 @@ import co.edu.udea.compumovil.gr02.lab02apprun.R;
  */
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String PREFERENCIA = "preferencia";
+    public SharedPreferences sharedpreferences;
     private EditText contraseñaView;
     private AutoCompleteTextView correoView;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Obtengo preferencia compartida para almacenar la sesion
+        sharedpreferences = getSharedPreferences(PREFERENCIA, Context.MODE_PRIVATE);
+
+        //Obtengo componentes visuales
         correoView = (AutoCompleteTextView) findViewById(R.id.email);
         contraseñaView = (EditText) findViewById(R.id.password);
         contraseñaView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -44,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.ingresar_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +63,12 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    private void guardarSesion(String correo, String contrasena){
+        editor = sharedpreferences.edit();
+        editor.putString("correo", correo);
+        editor.putString("contrasena", contrasena);
+        editor.commit();
+    }
 
     private void validarLogin() {
 
@@ -86,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (!cancel) {
+            guardarSesion(email,password);
             Intent intent = new Intent(this, NavigationDrawerActivity.class);
             startActivity(intent);
             this.finish();
