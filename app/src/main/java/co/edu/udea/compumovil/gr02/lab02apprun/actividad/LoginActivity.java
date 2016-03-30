@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
 
         correoView = (AutoCompleteTextView) findViewById(R.id.email);
         contraseñaView = (EditText) findViewById(R.id.password);
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         // Reset errors.
         contraseñaView.setError(null);
 
-        // Store values at the time of the login attempt.
+        // Store values at the time of the activity_login attempt.
         String email = correoView.getText().toString();
         String password = contraseñaView.getText().toString();
 

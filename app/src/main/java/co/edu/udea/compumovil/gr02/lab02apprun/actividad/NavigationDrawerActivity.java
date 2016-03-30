@@ -15,8 +15,6 @@ import android.view.MenuItem;
 
 
 import co.edu.udea.compumovil.gr02.lab02apprun.R;
-import co.edu.udea.compumovil.gr02.lab02apprun.dao.UsuarioDAO;
-import co.edu.udea.compumovil.gr02.lab02apprun.modelo.Usuario;
 
 
 public class NavigationDrawerActivity extends AppCompatActivity
@@ -25,7 +23,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_navigation);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

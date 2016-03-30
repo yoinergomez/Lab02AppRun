@@ -9,7 +9,7 @@
     <string name="opcion_perfil">Perfil</string>
     <string name="opcion_acerca">Acerca de</string>
 
-    <!-- Strings related to login -->
+    <!-- Strings related to activity_login -->
     <string name="error_correo_invalido">Este correo es invalido</string>
     <string name="error_contrasena_invalida">Esta contraseña es muy corta</string>
     <string name="error_contrasena_incorrecta">Contraseña incorrecta</string>
