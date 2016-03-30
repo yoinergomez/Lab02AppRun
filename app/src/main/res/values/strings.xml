@@ -19,6 +19,7 @@
     <string name="login_correo">Correo</string>
     <string name="login_contraseña">Contraseña</string>
     <string name="accion_ingresar">Ingresar</string>
+    <string name="accion_registrar">Registrar</string>
 
 
 </resources>
