@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -65,9 +66,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private void guardarSesion(String correo, String contrasena){
         editor = sharedpreferences.edit();
+        editor.clear();
+        System.out.println(sharedpreferences.getString("correo", null));
+        if(editor.commit()){
+            Log.d("@@@", "Elimino");
+        }
         editor.putString("correo", correo);
         editor.putString("contrasena", contrasena);
-        editor.commit();
+        if(editor.commit()){
+            Log.d("@@@", "Guardo");
+        }
+        editor.apply();
     }
 
     private void validarLogin() {
