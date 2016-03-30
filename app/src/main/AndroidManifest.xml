@@ -16,7 +16,7 @@
 
         <activity
             android:name=".actividad.LoginActivity"
-            android:label="@string/app_name">
+            android:label="@string/autenticacion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
