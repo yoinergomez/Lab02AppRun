@@ -54,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
         //Verificar si existe una sesion previa
         if(existeSesion()){
             iniciarNavigationDrawer();
@@ -71,17 +72,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void guardarSesion(String correo, String contrasena){
         editor = sharedpreferences.edit();
-        editor.clear();
-        System.out.println(sharedpreferences.getString("correo", null));
-        if(editor.commit()){
-            Log.d("@@@", "Elimino");
-        }
         editor.putString("correo", correo);
         editor.putString("contrasena", contrasena);
         if(editor.commit()){
-            Log.d("@@@", "Guardo");
+            Log.d("@@@", "Guardo sesion");
         }
-        editor.apply();
     }
 
     private void validarLogin() {
@@ -124,7 +119,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public boolean existeSesion(){
-        return false;
+        String correo = sharedpreferences.getString("correo", null);
+        String contrasena = sharedpreferences.getString("contrasena", null);
+        return !(correo==null && contrasena==null);
     }
 
     public void iniciarNavigationDrawer(){
